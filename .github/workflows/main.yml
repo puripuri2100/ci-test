@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/checkout@master
       - name: compile check
-        uses: actions/checkout@master
         run: |
           sudo find /home/ -name "hoge.txt"   
           pwd
