@@ -22,5 +22,5 @@ jobs:
           cd ci-test
           ls
           echo "これで終わり？"
+          cat $(pwd)/test.saty
 #          docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/ci-test/ci-test/test/test.saty
-#        run: docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/make-puzzle/make-puzzle/test/test.saty
