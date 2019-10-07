@@ -1,0 +1,10 @@
+@require: stdja
+
+document (|
+  title = {test};
+  author = {};
+  show-title = true;
+  show-toc = true;
+|) '<
+  
+>
