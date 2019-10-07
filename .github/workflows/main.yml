@@ -12,6 +12,8 @@ jobs:
         run: |
           sudo find -name "hoge.txt"   
           pwd
+          cd /home
+          ls
           cd /home/runner/work
           ls
           cd ci-test
