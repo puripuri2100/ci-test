@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@master
       - name: compile check
         run: |
-          sudo find /home/ -name "hoge.txt"   
+          sudo find /home/ -name "test.saty"   
           pwd
           cd /home
           ls
@@ -22,5 +22,5 @@ jobs:
           cd ci-test
           ls
           echo "これで終わり？"
-          docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/ci-test/ci-test/test/test.saty
+#          docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/ci-test/ci-test/test/test.saty
 #        run: docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/make-puzzle/make-puzzle/test/test.saty
