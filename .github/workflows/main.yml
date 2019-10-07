@@ -12,7 +12,7 @@ jobs:
         run: |
           ls
           pwd
-          cat test.saty
+#          cat test.saty
           cd /home/runner/work
           ls
 #        run: docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/make-puzzle/make-puzzle/test/test.saty
