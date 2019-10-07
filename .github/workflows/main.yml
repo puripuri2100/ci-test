@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: compile check
         run: |
-          ls
           pwd
           cd /home/runner/work
+          ls
+          cd ci-test
           ls
 #        run: docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only /home/runner/work/make-puzzle/make-puzzle/test/test.saty
