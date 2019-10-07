@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: compile check
         run: |
+          sudo find -name "hoge.txt"   
           pwd
           cd /home/runner/work
           ls
