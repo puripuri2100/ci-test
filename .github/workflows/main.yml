@@ -11,8 +11,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: OCaml Install
         run: |
+          sudo apt update
+          sudo apt upgrade
           sudo apt -y install ocaml
           ocaml --version
+          ocamlfind ocamlopt --version
       - name: compile
         run: ocamlfind ocamlopt -o test -linkpkg test.ml
       - name: test
