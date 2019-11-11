@@ -16,6 +16,6 @@ jobs:
           ocaml --version
           ocamlfind ocamlopt --version
       - name: compile
-        run: ocamlfind ocamlopt -o test -linkpkg test.ml
+        run: ocamlopt test.ml
       - name: test
-        run: ./test
+        run: ./a.out
