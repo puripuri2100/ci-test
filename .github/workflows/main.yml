@@ -11,16 +11,7 @@ jobs:
       - uses: actions/checkout@master
       - name: compile check
         run: |
-          sudo find /home/ -name "test.saty"   
-          pwd
-          cd /home
-          ls
-          cd /home/runner/work
-          ls
-          cd ci-test
-          ls
-          cd ci-test
-          ls
-          echo "これで終わり？"
-          cat $(pwd)/test.saty
-          docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi --type-check-only $(pwd)/test.saty
+          sudo apt -y install ocaml
+          ocaml --version
+          ocamlfind ocamlopt -o test -linkpkg test.ml
+          ./test
