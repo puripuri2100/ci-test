@@ -9,7 +9,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v1
-      - uses: ./
       - name: OCaml Install
         run: |
           sudo apt -y install ocaml
