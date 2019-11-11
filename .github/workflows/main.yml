@@ -12,7 +12,7 @@ jobs:
       - name: OCaml Install
         run: |
           sudo apt update
-          sudo apt -y install ocaml=4.06.0
+          sudo apt -y install ocaml
           ocaml --version
           ocamlfind ocamlopt --version
       - name: compile
