@@ -1,4 +1,4 @@
-name: make-puzzle-CI
+name: ci-test
 
 on: [push, pull_request]
 
@@ -8,10 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@master
-      - name: compile check
+      - uses: actions/checkout@v1
+      - uses: ./
+      - name: OCaml Install
         run: |
           sudo apt -y install ocaml
           ocaml --version
-          ocamlfind ocamlopt -o test -linkpkg test.ml
-          ./test
+      - name: compile
+        run: ocamlfind ocamlopt -o test -linkpkg test.ml
+      - name: test
+        run: ./test
