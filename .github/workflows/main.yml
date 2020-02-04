@@ -19,5 +19,5 @@ jobs:
     - run: opam install menhir
     - run: opam install ocamlfind
     - run: export PATH=$PATH:~/.opam/*/bin/menhir
-    - run: export PATH=$PATH:~/.opam/*/bin/ocamlfind
+#    - run: export PATH=$PATH:~/.opam/*/bin/ocamlfind
     - run: make xmltest

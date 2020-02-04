@@ -2,4 +2,4 @@
 
 xmltest:
 	menhir --version 
-	ocamlfind ocamlopt -o xmltest -linkpkg -package xml-light test.ml
+#	ocamlfind ocamlopt -o xmltest -linkpkg -package xml-light test.ml
