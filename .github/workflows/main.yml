@@ -18,3 +18,4 @@ jobs:
     - run: opam pin add test.dev -n .
     - run: opam depext -yt test
     - run: opam install -t . --deps-only
+    - run: xmltest
