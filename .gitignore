@@ -1,0 +1,6 @@
+*.cmi
+*.cmx
+*.o
+*.pdf
+*.satysfi-aux
+*/xmltest

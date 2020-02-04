@@ -3,19 +3,18 @@ name: ci-test
 on: [push, pull_request]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-    
+  run:
+    name: Build
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [macos-latest, ubuntu-latest]
+        ocaml-version: [ '4.09.0', '4.08.1', '4.07.0', '4.06.0' ]
     steps:
-      - uses: actions/checkout@v1
-      - name: OCaml Install
-        run: |
-          sudo apt update
-          sudo apt -y install ocaml
-          ocaml --version
-          ocamlfind ocamlopt --version
-      - name: compile
-        run: ocamlopt test.ml
-      - name: test
-        run: ./a.out
+    - uses: actions/checkout@master
+    - uses: avsm/setup-ocaml@master
+      with:
+        ocaml-version: ${{ matrix.ocaml-version }}
+    - run: opam install xml-light
+    - run: opam install menhir
+    - run: make xmltest
