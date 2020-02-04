@@ -15,9 +15,6 @@ jobs:
     - uses: avsm/setup-ocaml@master
       with:
         ocaml-version: ${{ matrix.ocaml-version }}
-    - run: opam install xml-light
-    - run: opam install menhir
-    - run: cp ~/.opam/*/bin/menhir .
-    - run: opam install ocamlfind
-    - run: cp ~/.opam/*/bin/ocamlfind .
-    - run: make xmltest
+    - run: opam pin add test.dev -n .
+    - run: opam depext -yt test
+    - run: opam install -t . --deps-only

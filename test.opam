@@ -1,0 +1,21 @@
+opam-version: "2.0"
+maintainer: "puripuri2100@"
+authors: [ "puripuri2100" ]
+synopsis: "test"
+description: """
+test
+"""
+license: "UNLICENSE"
+tags: []
+homepage: "https://github.com/puripuri2100/ci-test"
+doc: "https://github.com/puripuri2100/ci-test"
+bug-reports: "https://github.com/puripuri2100/ci-test"
+depends: [
+  "ocaml" {>= "4.06.0"}
+  "xml-light"
+  "menhir"
+]
+build: [
+  ["make" "-f" "Makefile" "xmltest"]
+]
+dev-repo: "https://github.com/puripuri2100/ci-test"
